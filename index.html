@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<h1><a href="dom.html">DOM</a></h1>
+	<h1><a href="multiple_buttons.html">Multiple Buttons</a></h1>
+
+	<div id="myDiv">This is a div</div>
+	<p>First paragraph.</p>
+	<p>Second paragraph.</p>
+
+	<button onclick="alert('Button was clicked!')">Click me</button>
+
+	<input type="text" id="textInput" />
+	<p id="textDisplay"></p>
+
+	<script src="script.js"></script>
+
+	<ul id="itemList"></ul>
+	<script>
+		const items = [
+			{ name: 'Item 1' },
+			{ name: 'Item 2' },
+			{ name: 'Item 3' },
+			{ name: 'Item 4' }
+		];
+
+		for (let i = 0; i < items.length; i++) {
+			document.getElementById('itemList').innerHTML += `<li>${items[i].name}</li>`;
+		}
+	</script>
+
+</body>
+
+</html>

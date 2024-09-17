@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Multiple Buttons DOM Exercise</title>
+</head>
+
+<body>
+
+	<h1><a href="index.html">Index</a></h1>
+
+	<button class="btn-onclick">Button 1</button>
+	<button class="btn-onclick">Button 2</button>
+	<button class="btn-onclick">Button 3</button>
+
+	<script>
+
+		let buttons = document.querySelectorAll('.btn-onclick');
+		for (let i = 0; i < buttons.length; i++) {
+			buttons[i].onclick = function () {
+				document.body.style.background = "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
+			}
+		}
+	</script>
+
+</body>
+
+</html>
